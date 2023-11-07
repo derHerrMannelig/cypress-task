@@ -4,6 +4,7 @@
     "cypress": "^13.4.0"
   },
   "scripts": {
+    "cypress:headless": "cypress run",
     "cypress:open": "cypress open"
   }
 }
