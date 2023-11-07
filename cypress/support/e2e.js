@@ -17,7 +17,7 @@
 import './commands'
 import mainPage from '../pages/main-page.js';
 
-beforeEach(() => {
+before(() => {
   mainPage.gotoBaseUrl();
 })
 
