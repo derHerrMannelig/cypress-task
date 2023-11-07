@@ -5,6 +5,7 @@ const home = 'a.nav-link[ui-sref="app.home"]:first';
 const signIn = 'a.nav-link[ui-sref="app.login"]';
 const register = 'a.nav-link[ui-sref="app.register"]';
 const footer = 'a:has(i.ion-social-github)';
+const nickname = 'a.nav-link.ng-binding[ui-sref-active="active"]';
 
 class MainPage {
   gotoBaseUrl() {
@@ -13,6 +14,9 @@ class MainPage {
 
   getFooter() {
     return page.getElement(footer);
+  }
+  getNickname() {
+    return page.getElement(nickname);
   }
 
   clickLogoButton() {
