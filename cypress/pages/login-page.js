@@ -3,6 +3,7 @@ import page from './page.js';
 const login = 'input[type="email"]';
 const pass = 'input[type="password"]';
 const signIn = 'button[type="submit"]';
+const error = 'li[ng-repeat="error in errors"]';
 
 class LoginPage {
   getLogin() {
@@ -10,6 +11,9 @@ class LoginPage {
   }
   getPassword() {
     return page.getElement(pass);
+  }
+  getError() {
+    return page.getElement(error);
   }
 
   clickSignInButton() {
