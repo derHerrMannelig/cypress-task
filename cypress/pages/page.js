@@ -6,7 +6,7 @@ class Page {
     cy.visit(url == undefined ? '' : url);
   }
   getElement(element) {
-    cy.get(element);
+    return cy.get(element);
   }
   clickElement(element) {
     cy.get(element).click();
