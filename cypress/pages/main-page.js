@@ -7,6 +7,9 @@ const register = 'a.nav-link[ui-sref="app.register"]';
 const article = 'a.nav-link[ui-sref="app.editor"]'
 const footer = 'a:has(i.ion-social-github)';
 const nickname = 'a.nav-link.ng-binding[ui-sref-active="active"]';
+const tags = 'a.tag-default';
+const tagActive = 'a.nav-link.active.ng-binding';
+const feed = 'a.nav-link:contains("Global Feed")';
 
 class MainPage {
   gotoBaseUrl() {
@@ -18,6 +21,12 @@ class MainPage {
   }
   getNickname() {
     return page.getElement(nickname);
+  }
+  getTags() {
+    return page.getElement(tags);
+  }
+  getActiveTag() {
+    return page.getElement(tagActive);
   }
 
   clickLogoButton() {
@@ -37,6 +46,9 @@ class MainPage {
   }
   clickArticleButton() {
     page.clickElement(article);
+  }
+  clickFeedButton() {
+    page.clickElement(feed);
   }
 }
 
