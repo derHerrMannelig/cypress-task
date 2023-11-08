@@ -40,5 +40,7 @@ describe('new article', () => {
     editorPage.getPublishedText().should('be.visible');
     editorPage.getPublishedTitle().should('have.text', `${randomTitle}`);
     editorPage.getPublishedText().should('have.text', `${randomText}\n`);
+    editorPage.clickDeleteArticleButton();
+    page.currentUrl().should('eq', `${baseUrl}`);
   })
 })

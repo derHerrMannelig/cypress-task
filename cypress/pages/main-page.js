@@ -10,6 +10,11 @@ const nickname = 'a.nav-link.ng-binding[ui-sref-active="active"]';
 const tags = 'a.tag-default';
 const tagActive = 'a.nav-link.active.ng-binding';
 const feed = 'a.nav-link:contains("Global Feed")';
+const authors = 'a.author.ng-binding';
+const authorActive = 'h4.ng-binding';
+const follow = 'button.action-btn';
+const followedAuthor = 'a.author.ng-binding[ui-sref="app.profile.main({ username:$ctrl.article.author.username })"]:first';
+const noArticles = 'div.article-preview[ng-show="!$ctrl.loading && !$ctrl.list.length"]';
 
 class MainPage {
   gotoBaseUrl() {
@@ -27,6 +32,24 @@ class MainPage {
   }
   getActiveTag() {
     return page.getElement(tagActive);
+  }
+  getAuthors() {
+    return page.getElement(authors);
+  }
+  getActiveAuthor() {
+    return page.getElement(authorActive);
+  }
+  getFollow() {
+    return page.getElement(follow);
+  }
+  getFollowedAuthor() {
+    return page.getElement(followedAuthor);
+  }
+  getNoArticlesElement() {
+    return page.getElement(noArticles);
+  }
+  getFeed() {
+    return page.getElement(feed);
   }
 
   clickLogoButton() {
@@ -49,6 +72,12 @@ class MainPage {
   }
   clickFeedButton() {
     page.clickElement(feed);
+  }
+  clickFollowButton() {
+    page.clickElement(follow);
+  }
+  clickFollowedAuthor() {
+    page.clickElement(followedAuthor);
   }
 }
 

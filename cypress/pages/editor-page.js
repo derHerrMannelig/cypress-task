@@ -7,6 +7,7 @@ const tags = 'input[placeholder="Enter tags"]';
 const publish = 'button.btn-primary';
 const titlePublished = 'h1.ng-binding';
 const textPublished = 'div.ng-binding';
+const deleteArticle = 'button.btn.btn-outline-danger.btn-sm:first';
 
 class EditorPage {
   getTitle() {
@@ -30,6 +31,9 @@ class EditorPage {
 
   clickPublishButton() {
     page.clickElement(publish);
+  }
+  clickDeleteArticleButton() {
+    page.clickElement(deleteArticle);
   }
 }
 
