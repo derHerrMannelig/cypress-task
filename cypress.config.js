@@ -1,10 +1,9 @@
 const { defineConfig } = require("cypress");
 
+console.log("Current configuration: default.");
+
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://demo.realworld.io/#/',
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
   },
 });
