@@ -15,6 +15,9 @@ const authorActive = 'h4.ng-binding';
 const follow = 'button.action-btn';
 const followedAuthor = 'a.author.ng-binding[ui-sref="app.profile.main({ username:$ctrl.article.author.username })"]:first';
 const noArticles = 'div.article-preview[ng-show="!$ctrl.loading && !$ctrl.list.length"]';
+const settings = 'a.nav-link[ui-sref="app.settings"]';
+const logout = 'button[ng-click="$ctrl.logout()"]';
+const like = 'favorite-btn.ng-scope';
 
 class MainPage {
   gotoBaseUrl() {
@@ -51,6 +54,9 @@ class MainPage {
   getFeed() {
     return page.getElement(feed);
   }
+  getLikeButtons() {
+    return page.getElement(like);
+  }
 
   clickLogoButton() {
     page.clickElement(logo);
@@ -78,6 +84,12 @@ class MainPage {
   }
   clickFollowedAuthor() {
     page.clickElement(followedAuthor);
+  }
+  clickSettingsButton() {
+    page.clickElement(settings);
+  }
+  clickLogoutButton() {
+    page.clickElement(logout);
   }
 }
 
