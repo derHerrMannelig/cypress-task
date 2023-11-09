@@ -1,4 +1,4 @@
-import mainPage from '../pages/main-page.js';
+import mainPage from '../pages/main.page.js';
 
 before(() => {
   mainPage.gotoBaseUrl();

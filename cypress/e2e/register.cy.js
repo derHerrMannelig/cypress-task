@@ -1,6 +1,6 @@
 import page from '../pages/page.js';
-import mainPage from '../pages/main-page.js';
-import registerPage from '../pages/register-page.js';
+import mainPage from '../pages/main.page.js';
+import registerPage from '../pages/register.page.js';
 
 const baseUrl = Cypress.config().baseUrl;
 const { faker } = require('@faker-js/faker');

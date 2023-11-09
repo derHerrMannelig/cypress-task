@@ -1,6 +1,6 @@
 import page from '../pages/page.js';
-import mainPage from '../pages/main-page.js';
-import loginPage from '../pages/login-page.js';
+import mainPage from '../pages/main.page.js';
+import loginPage from '../pages/login.page.js';
 
 const baseUrl = Cypress.config().baseUrl;
 const testData = JSON.parse(JSON.stringify(require('../fixtures/data.json')));

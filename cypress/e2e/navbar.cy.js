@@ -1,5 +1,5 @@
 import page from '../pages/page.js';
-import mainPage from '../pages/main-page.js';
+import mainPage from '../pages/main.page.js';
 
 const baseUrl = Cypress.config().baseUrl;
 
